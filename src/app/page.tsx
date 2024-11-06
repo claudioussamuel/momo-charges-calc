@@ -16,14 +16,14 @@ export default async function Home() {
       <div className="bg-white grid grid-cols-1 lg:grid-cols-2 rounded-xl lg:w-2/3 lg:m-4 m-2">
        <div className="lg:py-6 lg:px-8 py-4 px-4">
        <div className="flex justify-between items-center ">
-        <h1 className="font-bold text-2xl">Momo Charges Calculator</h1>
+        <h1 className="font-bold text-2xl text-black">Momo Charges Calculator</h1>
         </div>
-          <form action={calculateCharges} className="mt-6 flex flex-col h-full">
+          <form action={calculateCharges} className="mt-6 flex flex-col h-full text-black">
           <input
               type="number"
               name="amount"
               placeholder="Enter amount"
-              className="p-2 border rounded-md h-14 w-full mb-4"
+              className="p-2 border rounded-md h-14 w-full mb-4 text-black"
               required
             />
           

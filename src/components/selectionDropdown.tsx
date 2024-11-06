@@ -36,7 +36,7 @@ export default function SelectionDropdown({
                 size="sm" 
                 src={item.data?.logo} 
               />
-              <span>{item.data?.name}</span>
+              <span className="text-black">{item.data?.name}</span>
             </div>
           ));
         }}
