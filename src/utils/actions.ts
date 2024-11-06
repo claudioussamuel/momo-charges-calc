@@ -7,7 +7,7 @@ const calculateCharges = async (formData: FormData) => {
     const sourceTelco = formData.get("sourceTelco")
     const destinationTelco = formData.get("destinationTelco")
     const amount = Number(formData.get("amount"))
-    let charges = 0;
+    let charges : number =0;
   
     if (sourceTelco == "Telecel" && destinationTelco == "Telecel") {
       if (amount <= 100) {
@@ -18,7 +18,7 @@ const calculateCharges = async (formData: FormData) => {
         charges = 5;
       }
     } else if (sourceTelco == "AT" && destinationTelco == "AT") {
-      let charges = 0;
+   
       if (amount <= 100) {
         charges = 0;
       } else if (amount <= 1000) {
@@ -47,6 +47,8 @@ const calculateCharges = async (formData: FormData) => {
     }
     else if (sourceTelco == "AT" && destinationTelco == "Telecel") {
        charges =amount * 0.025;
+    } else {
+      charges = 0;
     }
    
     useChargesStore.getState().setAmount(amount);
