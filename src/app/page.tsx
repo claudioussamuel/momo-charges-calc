@@ -12,9 +12,9 @@ export default async function Home() {
   const telcos: Telco[] = await res.json();
 
   return (
-    <div className="bg-slate-100 w-screen h-screen flex items-center justify-center">
-      <div className="bg-white grid grid-cols-1 lg:grid-cols-2 rounded-xl w-2/3 m-4">
-       <div className="py-6 px-8">
+    <div className="bg-slate-100 w-screen min-h-screen flex items-center justify-center">
+      <div className="bg-white grid grid-cols-1 lg:grid-cols-2 rounded-xl lg:w-2/3 lg:m-4 m-2">
+       <div className="lg:py-6 lg:px-8 py-4 px-4">
        <div className="flex justify-between items-center ">
         <h1 className="font-bold text-2xl">Momo Charges Calculator</h1>
         </div>
