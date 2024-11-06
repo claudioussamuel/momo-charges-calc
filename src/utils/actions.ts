@@ -1,4 +1,4 @@
-  "use server"
+"use server"
 import { useChargesStore } from "@/zustan/charges-store";
 import { revalidatePath } from "next/cache";
 
@@ -57,4 +57,25 @@ const calculateCharges = async (formData: FormData) => {
     revalidatePath("/");
   }
   
-  export { calculateCharges };
+  const joinNewsletter = async (phoneNumber: string) => {
+    try {
+      const response = await fetch('https://telcos-five.vercel.app/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phoneNumber }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to subscribe');
+      }
+    
+      return { success: true };
+    } catch (error) {
+     
+      return { success: false };
+    }
+  };
+  
+  export { calculateCharges, joinNewsletter };

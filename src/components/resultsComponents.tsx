@@ -1,6 +1,7 @@
 import { TransactionResults } from "@/utils/interfaces";
 import EmptyIcon from "../../public/illustration-empty.svg";
 import Image from "next/image";
+import ModalClass from "./modal";
 
 
 
@@ -23,6 +24,7 @@ export default  function Results({ results }: { results: TransactionResults }) {
                             <p className="text-sm text-white mt-6">The total amount you are sending is</p>
                             <p className="lg:text-xl text-lg text-white font-bold mt-2 text-xl tracking-wide">GH₵{results.totalAmount}</p>
                         </div>
+                        <ModalClass />
                      </div>
                     </div>
                 ) : (

@@ -24,4 +24,5 @@ export interface Telco {
     variant?: "solid" | "bordered" | "light" | "flat" | "faded" | "shadow"
     size?: "sm" | "md" | "lg"
     type?: "button" | "submit" | "reset"
+    actions : string
   }

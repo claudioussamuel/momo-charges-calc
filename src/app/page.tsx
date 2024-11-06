@@ -5,6 +5,7 @@ import { Telco } from "@/utils/interfaces";
 import { calculateCharges } from "@/utils/actions";
 import { useChargesStore } from "@/zustan/charges-store";
 
+
 const telcosUrl = "https://telcos-five.vercel.app/api/telcos";
 
 export default async function Home() {
@@ -31,8 +32,10 @@ export default async function Home() {
             
             <SelectionDropdown telcos={telcos} label="To" name="destinationTelco" required />
           
-            
-            <Button color="warning" type="submit" >Calculate Charges</Button>
+            <div className="mt-auto mb-16">
+            <Button actions="Calculating..." color="warning" type="submit" >Calculate Charges</Button>
+          
+            </div>
           </form>
      
 

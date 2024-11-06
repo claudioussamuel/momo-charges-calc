@@ -2,7 +2,7 @@
 
 import { ButtonProps } from "@/utils/interfaces"
 import { Button as NextUIButton } from "@nextui-org/react"
-
+import { useFormStatus,useFormState } from "react-dom";
 
 
 export default function Button({ 
@@ -11,8 +11,10 @@ export default function Button({
   color = "primary",
   variant = "solid",
   size = "md",
-  type = "button"
+  type = "button",
+  actions
 }: ButtonProps) {
+    const { pending } = useFormStatus();
   return (
     <NextUIButton
       onClick={onClick}
@@ -20,9 +22,10 @@ export default function Button({
       variant={variant}
       size={size}
       type={type}
-      className="w-full mt-10 h-14 text-lg font-semibold"
+      className="w-full mt-10  h-14 text-lg font-semibold"
+      disabled={pending}
     >
-      {children}
+      {pending ? actions : children}
     </NextUIButton>
   )
 }
