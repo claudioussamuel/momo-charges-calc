@@ -32,7 +32,7 @@ export default async function Home() {
             
             <SelectionDropdown telcos={telcos} label="To" name="destinationTelco" required />
           
-            <div className="mt-auto mb-16">
+            <div className="lg:mt-auto lg:mb-16">
             <Button actions="Calculating..." color="warning" type="submit" >Calculate Charges</Button>
           
             </div>
