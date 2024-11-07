@@ -73,7 +73,7 @@ const calculateCharges = async (formData: FormData) => {
     
       return { success: true };
     } catch (error) {
-     
+        console.error('Newsletter subscription error:', error);
       return { success: false };
     }
   };

@@ -2,7 +2,7 @@
 
 import { ButtonProps } from "@/utils/interfaces"
 import { Button as NextUIButton } from "@nextui-org/react"
-import { useFormStatus,useFormState } from "react-dom";
+import { useFormStatus } from "react-dom";
 
 
 export default function Button({ 
