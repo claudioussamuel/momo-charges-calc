@@ -19,7 +19,7 @@ export default function SelectionDropdown({
     return ( <Select
         name={name}
         label={label}
-        className="w-full mt-4"
+        className="w-full mt-4 text-black"
         labelPlacement="outside"
         items={telcos}
         isRequired={required}
@@ -29,10 +29,10 @@ export default function SelectionDropdown({
         }}
         renderValue={(items) => {
           return items.map((item ) => (
-            <div key={item.key} className="flex items-center gap-2">
+            <div key={item.key} className="flex items-center gap-2 text-black">
               <Avatar 
                 alt={item.data?.name} 
-                className="flex-shrink-0" 
+                className="flex-shrink-0 text-black" 
                 size="sm" 
                 src={item.data?.logo} 
               />
@@ -48,7 +48,7 @@ export default function SelectionDropdown({
             startContent={
               <Avatar 
                 alt={telco.name} 
-                className="w-6 h-6" 
+                className="w-6 h-6 text-black" 
                 src={telco.logo} 
               />
             }

@@ -29,7 +29,7 @@ export default function ModalClass() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Mailing List</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 text-black">Mailing List</ModalHeader>
               <ModalBody>
                 <Input
                   autoFocus
@@ -39,6 +39,7 @@ export default function ModalClass() {
                   type="number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="text-black"
                 />
               </ModalBody>
               <ModalFooter>
